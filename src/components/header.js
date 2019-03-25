@@ -5,7 +5,6 @@ const HeaderContainer = styled.header`
   color: ${props => props.color || props.theme.colors.grey};
   z-index: ${props => props.zIndex || props.theme.zIndices[1]};
   background-color: ${props => props.theme.colors.heritageBlue};
-  position: absolute;
   margin-bottom: ${props => props.theme.space[4]};
   width: 100%;
   .wrapper {
