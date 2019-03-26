@@ -29,7 +29,7 @@ const theme = {
     heritageYellow: '#fcbb69',
     redPrimary: '#df3034'
   },
-  fontSizes: ["14px", "16px", "20px", "28px:", "36px"],
+  fontSizes: ["14px", "16px", "20px", "28px", "36px"],
   heights: [4, 8, 12, 16, 24, 32, 40],
   space: ["0px", "4px", "8px", "12px", "16px", "24px", "32px", "40px"],
   lineHeights: ["20px", "24px", "28px", "36px", "48px"],

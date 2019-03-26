@@ -5,6 +5,7 @@ import theme from "./theme";
 import PositionSticky from "./components/Position";
 import Header from "./components/header";
 import Heading1 from "./components/heading1";
+import Well from "./components/well";
 
 const GlobalStyles = createGlobalStyle`
   body {
@@ -23,12 +24,14 @@ class App extends Component {
           <Header />
           <PositionSticky
             paddingTop="30px"
-            bg="yellow"
             fontWeight="bold"
             mt="50px"
-            ml={[7]}
+            ml="auto"
+            mr="auto"
+            width="90%"
           >
             <Heading1> Form Heading</Heading1>
+            <Well/>
           </PositionSticky>
         </React.Fragment>
       </ThemeProvider>
