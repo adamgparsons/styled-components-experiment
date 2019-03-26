@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import "../node_modules/normalize.css";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { textStyle, createGlobalStyle, ThemeProvider } from "styled-components";
 import theme from "./theme";
-import PositionSticky from "./components/Position";
-import Header from "./components/header";
-import Heading1 from "./components/heading1";
+import Container from "./components/Container";
+import Header from "./components/Header";
+import H1 from "./components/H1";
+import H2 from "./components/H2";
+import H3 from "./components/H3";
+import P from "./components/Paragraph";
 
 const GlobalStyles = createGlobalStyle`
   body {
@@ -21,15 +24,38 @@ class App extends Component {
         <React.Fragment>
           <GlobalStyles />
           <Header />
-          <PositionSticky
-            paddingTop="30px"
-            bg="yellow"
-            fontWeight="bold"
-            mt="50px"
-            ml={[7]}
-          >
-            <Heading1> Form Heading</Heading1>
-          </PositionSticky>
+          <Container mx={7} my={7}>
+            <H1>This is H1 heading</H1>
+            <P>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </P>
+            <H2>This is H2 heading</H2>
+            <P>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </P>
+            <H3>This is H3 heading</H3>
+            <P>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </P>
+          </Container>
         </React.Fragment>
       </ThemeProvider>
     );
