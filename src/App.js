@@ -1,29 +1,35 @@
-import React, { Component } from 'react';
-import Header from './components/header';
-import Heading1 from './components/heading1';
-import { ThemeProvider } from 'styled-components';
-import theme from './theme';
-import '../node_modules/normalize.css';
+import React, { Component } from "react";
+import "../node_modules/normalize.css";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import theme from "./theme";
+import PositionSticky from "./components/Position";
+import Header from "./components/header";
+import Heading1 from "./components/heading1";
 
-import styled from 'styled-components';
-
-const Main = styled.div`
-  margin-top: ${props => props.theme.space[6]};
-  margin-left : auto;
-  margin-right: auto;
-  max-width: 75%;
+const GlobalStyles = createGlobalStyle`
+  body {
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+    font-family: 'Open Sans', sans-serif;
+    margin:0;
+  }
 `;
 
 class App extends Component {
   render() {
     return (
-      // eslint-disable-next-line
-      <ThemeProvider theme={theme} style="margin:0">
+      <ThemeProvider theme={theme}>
         <React.Fragment>
+          <GlobalStyles />
           <Header />
-          <Main>
+          <PositionSticky
+            paddingTop="30px"
+            bg="yellow"
+            fontWeight="bold"
+            mt="50px"
+            ml={[7]}
+          >
             <Heading1> Form Heading</Heading1>
-          </Main>
+          </PositionSticky>
         </React.Fragment>
       </ThemeProvider>
     );
