@@ -1,6 +1,26 @@
 import styled from "styled-components";
 import { spacing, colors, layout, positioning } from "../constants";
 
+const PositionType = styled.div.attrs( type => ({
+      'position': (() => {
+        switch(type) {
+          case 'absolute':
+            return `absolute`;
+          case 'fixed':
+            return `fixed`;
+          case 'relative':
+            return `relative`;
+          case 'sticky':
+            return `sticky;
+                    top:0`;
+
+          default:
+            return 'relative';
+        }
+})()
+}))`
+`;
+
 export const PositionAbsolute = styled.div`
   position: absolute;
   ${spacing}
