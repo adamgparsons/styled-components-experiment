@@ -7,20 +7,20 @@ import {
 } from "styled-system";
 
 const Label = styled.label `
-display:block;
-font-weight: ${themeGet("fontWeights.bold")};
-margin-bottom: ${props => props.theme.space[3]};
+    display:block;
+    font-weight: ${themeGet("fontWeights.bold")};
+    margin-bottom: ${props => props.theme.space[3]};
 `
 const InputType = styled.input `
-display:block;
-border-radius: 0.125rem;
-border: none;
--webkit-box-shadow: inset 0 0 0 0.125rem #dfdfdf;
-box-shadow: inset 0 0 0 0.125rem #dfdfdf;
-font-weight: 600;
-line-height: 24px;
-outline: none;
-padding: 0.75rem 0.75rem;
+    display:block;
+    border: none;
+    -webkit-box-shadow: inset 0 0 0 0.125rem #dfdfdf;
+    box-shadow: inset 0 0 0 0.125rem #dfdfdf;
+    outline: none;
+    padding: 0.75rem 0.75rem;
+    line-height: ${props => props.theme.lineHeights[1]};
+    font-weight: ${themeGet("fontWeights.semiBold")};
+    border-radius: ${props => props.theme.radii[2]};
 `
 const Button = styled.button `
     box-shadow: inset 0 0 0 0.125rem #81cec6;
@@ -43,20 +43,24 @@ const Inputcontainer = styled.div`
   line-height: ${props => props.theme.lineHeights[1]};
 `;
 
-class Input extends Component {
+const FormContainer = styled.form`
+    margin-bottom: ${props => props.theme.space[6]};
+`
+
+class Form extends Component {
 
     render() {
       return(
-          <React.Fragment>
+          <FormContainer>
             <Inputcontainer>
                 <Label htmlFor="">Enter your name</Label>
                 <InputType></InputType>
             </Inputcontainer>
             <Button>Submit</Button>
-        </React.Fragment>
+        </FormContainer>
       ) 
       
     }
   }
 
-export default Input;
+export default Form;

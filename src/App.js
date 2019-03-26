@@ -6,7 +6,7 @@ import PositionSticky from "./components/Position";
 import Header from "./components/header";
 import Heading1 from "./components/heading1";
 import Well from "./components/well";
-import Input from "./components/input";
+import Form from "./components/form";
 
 const GlobalStyles = createGlobalStyle`
   body {
@@ -33,7 +33,7 @@ class App extends Component {
           >
             <Heading1> Form Heading</Heading1>
             <Well/>
-            <Input/>
+            <Form/>
           </PositionSticky>
         </React.Fragment>
       </ThemeProvider>
