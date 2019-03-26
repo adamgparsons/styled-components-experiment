@@ -18,7 +18,6 @@ const Paragraph = styled.p`
 
 const Wellcontainer = styled.div`
   color: ${themeGet("colors.heritageBlue")};
-  
   line-height: ${props => props.theme.lineHeights[4]};
   margin-bottom: ${props => props.theme.space[5]};
   font-weight: ${themeGet("fontWeights.regular")};
